@@ -28,7 +28,7 @@ export const NavigationBar = () => {
         <div className={styles.container}>
           <div className={styles.logo}>
             <img 
-              src="/images/leaderexpo2025_logo.png" 
+              src="/LeaderExpo2025/images/leaderexpo2025_logo.png" 
               alt="Leader Expo 2025 Logo" 
               onClick={() => scrollToSection('hero')}
             />
