@@ -1,0 +1,54 @@
+.carouselContainer {
+  position: absolute;
+  inset: 0; /* Shorthand for top/right/bottom/left: 0 */
+  width: 100%;
+  height: 100%;
+}
+
+:global(.slick-slider) {
+  position: static;
+  height: 100%;
+}
+
+:global(.slick-list),
+:global(.slick-track),
+:global(.slick-slide),
+:global(.slick-slide > div) {
+  height: 100%;
+}
+
+.slide {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 1rem; /* Match prizeColumn border-radius */
+}
+
+/* Pagination bullet styling */
+:global(.slick-dots) {
+  bottom: 20px; /* Space from bottom of container */
+  z-index: 1; /* Ensure dots are above images */
+}
+
+:global(.slick-dots li) {
+  margin: 0 4px; /* Space between dots */
+}
+
+:global(.slick-dots li button:before) {
+  color: white; /* Dot color */
+  opacity: 0.5; /* Default state opacity */
+  font-size: 8px; /* Dot size */
+}
+
+:global(.slick-dots li.slick-active button:before) {
+  color: white; /* Active dot color */
+  opacity: 1; /* Active state opacity */
+}

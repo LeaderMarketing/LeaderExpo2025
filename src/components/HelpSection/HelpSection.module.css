@@ -1,0 +1,116 @@
+.help {
+  padding: 4rem 2rem;
+  background-color: transparent;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 800;
+}
+
+.container p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.contactButtons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: var(--font-headlines);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  letter-spacing: -0.01em;
+  border-radius: 9999px;
+}
+
+.emailButton {
+  background-color: #007bff;
+  color: white;
+  border: 2px solid #007bff;
+}
+
+.emailButton:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.phoneButton {
+  background-color: #28a745;
+  color: white;
+  border: 2px solid #28a745;
+}
+
+.phoneButton:hover {
+  background-color: #218838;
+  border-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+}
+
+.contactInfo {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contactInfo p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contactButtons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .container h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .help {
+    padding: 3rem 1rem;
+  }
+
+  .container h2 {
+    font-size: 1.75rem;
+  }
+
+  .contactInfo {
+    padding: 1.5rem;
+  }
+}

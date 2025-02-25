@@ -1,0 +1,199 @@
+.registration {
+  padding: 4rem 2rem;
+  background-color: transparent;
+  color: white;
+}
+
+.twoColumnLayout {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  padding: 0 1rem;
+  align-items: flex-start;
+}
+
+.formColumn {
+  flex: 0 0 70%;
+  max-width: 70%;
+  width: 70%;
+}
+
+.prizeColumn {
+  flex: 0 0 30%;
+  max-width: 30%;
+  width: 30%;
+  background: linear-gradient(0deg, rgba(37, 38, 66, 0.5) 0%, rgba(0, 0, 0, 0.6) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(217, 222, 255, 0.3);
+  border-radius: 1rem;
+  box-sizing: border-box;
+  height: 540px;
+  overflow: hidden;
+  position: relative; /* For absolute positioning of carousel */
+  padding: 0; /* Remove padding to prevent gaps */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 800;
+}
+
+.description {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #ffffff;
+  max-width: 900px;
+  line-height: 1.6;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form {
+  background: linear-gradient(0deg, rgba(142, 142, 142, 0.2) 0%,rgba(0, 0, 0, 0.6) 50%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+.formGroup select {
+  height: 42px;
+  appearance: none;
+  background-color: white;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 16px;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.formGroup select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+select#accountManager::-webkit-scrollbar {
+  width: 6px;
+}
+
+select#accountManager::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+select#accountManager::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+select#accountManager::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.formGroup input::placeholder {
+  color: #888;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: .5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  letter-spacing: -0.01em;
+  font-family: var(--font-headlines);
+}
+
+.disclaimer {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: #cccccc;
+  text-align: left;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+.submitButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .twoColumnLayout {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
+  }
+  
+  .formColumn,
+  .prizeColumn {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .form, .prizeColumn {
+    padding: 1.5rem;
+  }
+
+  .prizeColumn {
+    height: auto;
+    min-height: 400px;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}

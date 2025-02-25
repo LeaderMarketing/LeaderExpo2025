@@ -1,0 +1,212 @@
+.whyAttend {
+  padding: 4rem 2rem;
+  background-color: transparent;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 3rem;
+  padding: 0 1.5rem;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.reasons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Main Card Styles */
+.mainCard {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(1, 12, 86, 0.8)), url('https://jcardenasleader.wordpress.com/wp-content/uploads/2025/02/w11.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.mainCard:hover {
+  box-shadow: inset 0 0 2rem rgba(120, 178, 255, 0.3);
+}
+
+.mainCardContent {
+  z-index: 1;
+}
+
+.mainCardTitle {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.mainCardDescription {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: .875rem;
+  line-height: 1.6;
+}
+
+/* Standard Card Styles */
+.standardCard {
+  background: linear-gradient(0deg, rgba(142, 142, 142, 0.2) 0%,rgba(0, 0, 0, 0.6) 50%);
+  backdrop-filter: blur(32px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.iconContainer {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(130, 163, 236, 0.2);
+  border-radius: .5rem;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.icon {
+  font-size: 2.5rem !important;
+  fill: url(#icon-gradient) !important;
+}
+
+.standardCardTitle {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.standardCardDescription {
+  color: rgb(255, 255, 255);
+  font-size: .875rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Grid Layout */
+.gridLayout {
+  display: contents; /* This maintains the grid layout of .reasons */
+}
+
+/* Carousel Layout */
+.carouselLayout {
+  display: none; /* Hidden by default, shown in media query */
+}
+
+.standardCardsSlider {
+  margin: 0 -0.75rem; /* Compensate for slide padding */
+}
+
+.standardCardsSlider :global(.slick-slide) {
+  padding: 0 0.75rem;
+}
+
+.standardCardsSlider :global(.slick-arrow) {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.standardCardsSlider :global(.slick-arrow:hover) {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.standardCardsSlider :global(.slick-prev) {
+  left: -5px;
+}
+
+.standardCardsSlider :global(.slick-next) {
+  right: -5px;
+}
+
+@media (max-width: 1200px) {
+  .gridLayout {
+    display: none; /* Hide grid layout */
+  }
+
+  .carouselLayout {
+    display: block; /* Show carousel layout */
+    margin: 0 -2rem;
+    padding: 0 2rem;
+  }
+
+  .reasons {
+    display: block;
+  }
+  
+  .mainCard {
+    margin-bottom: 3rem;
+    min-height: 400px;
+  }
+
+  .standardCard {
+    height: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .reasons {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .mainCard {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .reasons {
+    grid-template-columns: 1fr;
+  }
+  
+  .mainCard {
+    grid-column: 1;
+    min-height: 350px;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .mainCardTitle {
+    font-size: 1.75rem;
+  }
+}

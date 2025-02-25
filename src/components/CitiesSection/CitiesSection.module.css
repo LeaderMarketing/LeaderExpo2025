@@ -1,0 +1,269 @@
+.cities {
+  padding: 4rem 1.5rem;
+  background-color: transparent;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.container h2 {
+  font-weight: 800;
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 1rem;
+  padding: 0 1.5rem;
+}
+
+.description {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #ffffff;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.cityContainer {
+  margin-top: 2rem;
+  position: relative;
+}
+
+.cityContainer :global(.slick-track) {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.cityContainer :global(.slick-slide) {
+  height: auto;
+  margin: 0;
+}
+
+.cityContainer :global(.slick-slide > div) {
+  height: 100%;
+}
+
+/* Hide slider controls on larger screens */
+@media (min-width: 769px) {
+  .cityContainer :global(.slick-dots),
+  .cityContainer :global(.slick-arrow) {
+    display: none !important;
+  }
+}
+
+/* Enable slider controls on mobile */
+@media (max-width: 768px) {
+  .cityContainer {
+    padding: 0 1.5rem;
+  }
+
+  .cityContainer :global(.slick-track) {
+    gap: 0;
+  }
+
+  .cityContainer :global(.slick-slide) {
+    padding: 0 0.75rem;
+  }
+
+  .cityContainer :global(.slick-arrow) {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    top: 100px; /* Half of image height (200px) */
+    transform: translateY(-50%);
+  }
+
+  .cityContainer :global(.slick-arrow:hover) {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .cityContainer :global(.slick-prev) {
+    left: 10px;
+  }
+
+  .cityContainer :global(.slick-next) {
+    right: 10px;
+  }
+
+  .cityContainer :global(.slick-dots) {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .cityContainer :global(.slick-dots li) {
+    display: inline-block;
+    margin: 0 4px;
+  }
+
+  .cityContainer :global(.slick-dots li button:before) {
+    color: white;
+    opacity: 0.3;
+  }
+
+  .cityContainer :global(.slick-dots li.slick-active button:before) {
+    color: #ffffff;
+    opacity: 1;
+  }
+}
+
+.cityCard {
+  background-color: transparent;
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+
+.imageWrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.1) 100%);
+}
+
+.venueImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cityCard:hover .venueImage {
+  transform: scale(1.05);
+}
+
+.cityInfo {
+  padding: 1.5rem;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(0deg, rgba(142, 142, 142, 0.2) 0%,rgba(0, 0, 0, 0.6) 50%);
+  backdrop-filter: blur(16px);  
+}
+
+.state {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.date {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dateDay {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.dateValue {
+  font-size: 1rem;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.countdownItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 45px;
+}
+
+.countdownItem span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #00c3ff;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.countdownItem label {
+  font-size: 0.625rem;
+  color: #a7a7a7;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.venue {
+  font-size: .875rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 0.5rem;
+  min-height: 3.75rem; /* Approximately 3 lines of text at .875rem font size with default line height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapsButton {
+  font-family: var(--font-headlines);
+  font-weight: 600;
+  background-color: #007AFF;
+  color: #ffffff;
+  border: none;
+  border-radius: .5rem;
+  padding: .75rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  margin-top: auto;
+}
+
+.mapsButton:hover {
+  box-shadow: inset 0 0 8px rgba(116, 187, 254, 0.838);
+}
+
+@media (max-width: 768px) {
+  .cities {
+    padding: 3rem 1rem;
+  }
+
+  .container h2 {
+    font-size: 2rem;
+  }
+
+  .cityCard {
+    margin: 0.5rem 0;
+  }
+}

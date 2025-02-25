@@ -1,0 +1,94 @@
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: transparent;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.subheadline {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.speakersGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.speakerCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background: transparent;
+}
+
+.imageWrapper {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.speakerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.speakerName {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.speakerPosition {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin: 0.25rem 0;
+}
+
+.speakerCompany {
+  font-size: 1rem;
+  color: #b0b0b0;
+  margin: 0.25rem 0;
+}
+
+@media (max-width: 1200px) {
+  .speakersGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .speakersGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .imageWrapper {
+    width: 150px;
+    height: 150px;
+  }
+}

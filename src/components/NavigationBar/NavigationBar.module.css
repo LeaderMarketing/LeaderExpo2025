@@ -1,0 +1,233 @@
+.navWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  margin-right: auto;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding-right: env(safe-area-inset-right);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  max-width: 1500px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.logo {
+  flex: 0 0 auto;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 25px;
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+/* Hide menu button when mobile menu is open */
+.menuOpen .menuButton {
+  display: none !important;
+}
+
+.menuButton span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+.menuButton span:nth-child(1) {
+  top: 0;
+}
+
+.menuButton span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menuButton span:nth-child(3) {
+  bottom: 0;
+}
+
+.navItems {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 0 2rem;
+}
+
+.navItems button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: .938rem;
+  cursor: pointer;
+  padding: 0.5rem .75rem;
+  transition: all 0.2s ease;
+  font-family: var(--font-headlines);
+  font-weight: 500;
+}
+
+.navItems button:hover {
+  color: #007AFF;
+}
+
+.registerButton button {
+  background: #007AFF;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font-headlines);
+}
+
+.registerButton button:hover {
+  background: #1a8cff;
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  max-width: 300px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.mobileMenu.isOpen {
+  right: 0;
+}
+
+.mobileMenuContent {
+  padding: 80px 2rem 2rem;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileNavItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.mobileNavItems button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: color 0.2s ease;
+  font-family: var(--font-headlines);
+  font-weight: 600;
+}
+
+.mobileNavItems button:hover {
+  color: #007AFF;
+}
+
+.mobileRegisterButton {
+  margin-top: 2rem !important;
+  background: #007AFF !important;
+  color: white !important;
+  border-radius: 25px !important;
+  padding: 0.75rem 1.5rem !important;
+}
+
+.mobileRegisterButton:hover {
+  background: #1a8cff !important;
+  color: white !important;
+}
+
+@media (max-width: 1306px) {
+  .navItems {
+    gap: 1rem;
+  }
+
+  .navItems button {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .logo img {
+    height: 20px;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .navItems, .registerButton {
+    display: none;
+  }
+}

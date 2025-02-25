@@ -1,0 +1,111 @@
+.vendors {
+    padding: 4rem 2rem;
+    background-color: transparent;
+    width: 100%;
+    overflow: hidden; /* Prevent horizontal scroll */
+    box-sizing: border-box; /* Include padding in width calculation */
+    color: white;
+}
+  
+.vendors h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.platinumGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    max-width: 1500px;
+    margin: 0 auto 4rem;
+    box-sizing: border-box;
+}
+
+.regularGrid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2rem;
+    max-width: 1500px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+    .platinumGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .regularGrid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .platinumGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .regularGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .platinumGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .regularGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+  
+.platinumItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.platinumItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.45);
+}
+
+.platinumItem img {
+    max-width: 100%;
+    height: auto;
+}
+
+.regularItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.regularItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.45);
+}
+
+.regularItem img {
+    max-width: 100%;
+    height: auto;
+}
