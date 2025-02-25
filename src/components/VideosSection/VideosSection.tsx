@@ -128,8 +128,8 @@ export const VideosSection = ({ onModalClose }: VideosSectionProps) => {
       // Simply resume playback
       const playPromise = bgVideo.play();
       if (playPromise !== undefined) {
-        playPromise.catch(e => {
-          console.error('Error resuming background video:', e);
+        playPromise.catch(error => {
+          console.error('Error resuming background video:', error);
           // Try one more time after a short delay
           setTimeout(() => bgVideo.play().catch(console.error), 100);
         });
