@@ -197,7 +197,7 @@ export const VideosSection = ({ onModalClose }: VideosSectionProps) => {
     carouselRef.current.style.transform = `translateX(${clampedTranslateX}px)`;
   };
 
-  const handleMouseUp = (e: MouseEvent<HTMLDivElement> | TouchEvent<HTMLDivElement>) => {
+  const handleMouseUp = () => {
     setIsMouseDown(false);
     if (carouselRef.current) {
       carouselRef.current.style.cursor = 'grab';
